@@ -1,5 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 
+const TALLY_FORM_URL = "https://tally.so/embed/A7qM9z?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1";
+
 const COMPASS = {
   fire: {
     letter: "S",
@@ -161,6 +163,8 @@ function getDailyPrompt() {
 }
 
 export default function App() {
+  const [hasEntered, setHasEntered] = useState(false);
+  const [showTally, setShowTally] = useState(false);
   const [view, setView] = useState("home");
   const [activeDir, setActiveDir] = useState(null);
   const [activeTier, setActiveTier] = useState(null);
@@ -172,6 +176,8 @@ export default function App() {
 
   useEffect(() => {
     try {
+      const entered = localStorage.getItem("solo-dojo-entered");
+      if (entered === "true") setHasEntered(true);
       const raw = JSON.parse(localStorage.getItem("solo-dojo-journal") || "[]");
       if (Array.isArray(raw)) setJournal(raw);
     } catch {}
@@ -181,7 +187,7 @@ export default function App() {
     setFadeIn(false);
     const t = setTimeout(() => setFadeIn(true), 50);
     return () => clearTimeout(t);
-  }, [view, activeDir, activePrompt]);
+  }, [view, activeDir, activePrompt, hasEntered]);
 
   const daily = getDailyPrompt();
 
@@ -196,6 +202,22 @@ export default function App() {
       setFadeIn(true);
     }, 150);
   }, []);
+
+  const enterDojo = () => {
+    try {
+      localStorage.setItem("solo-dojo-entered", "true");
+    } catch {}
+    setHasEntered(true);
+    setShowTally(false);
+  };
+
+  const signOut = () => {
+    try {
+      localStorage.removeItem("solo-dojo-entered");
+    } catch {}
+    setHasEntered(false);
+    setView("home");
+  };
 
   const saveEntry = () => {
     if (!journalText.trim() || !activePrompt) return;
@@ -217,6 +239,73 @@ export default function App() {
 
   const compass = activeDir ? COMPASS[activeDir] : null;
 
+  // ─── WELCOME / GATE SCREEN ───
+  if (!hasEntered) {
+    return (
+      <div style={styles.app}>
+        <div style={{
+          ...styles.ambientGlow,
+          background: "radial-gradient(ellipse at 50% 30%, rgba(212,165,116,0.08), transparent 70%)"
+        }} />
+
+        <div style={{ ...styles.content, opacity: fadeIn ? 1 : 0, transition: "opacity 0.3s ease" }}>
+          <div style={{ ...styles.centered, justifyContent: "center", minHeight: "90vh" }}>
+            <h1 style={styles.title}>SOLO DOJO</h1>
+            <p style={styles.subtitleItalic}>A Compass for the Dark Night of the Soul. Or whatever.</p>
+            <div style={styles.accentLine} />
+
+            <div style={styles.welcomeCard}>
+              <p style={styles.welcomePara}>
+                Most people are taught how to fall in love.
+              </p>
+              <p style={styles.welcomePara}>
+                Almost no one is taught how to navigate love when it changes.
+              </p>
+              <p style={styles.welcomeParaAccent}>
+                This is a practice for the rest of it.
+              </p>
+            </div>
+
+            <button style={styles.enterBtn} onClick={() => setShowTally(true)}>
+              Enter the Dojo
+            </button>
+
+            <p style={styles.welcomeHint}>
+              Leave your name and the compass will open.
+            </p>
+
+            <p style={{ ...styles.footerText, marginTop: "40px" }}>
+              A Djedi Dojo Experience · DjediDojo.com
+            </p>
+          </div>
+        </div>
+
+        {showTally && (
+          <div style={styles.modalOverlay} onClick={() => setShowTally(false)}>
+            <div style={styles.tallyModal} onClick={e => e.stopPropagation()}>
+              <div style={styles.modalHeader}>
+                <h2 style={styles.modalTitle}>Enter the Dojo</h2>
+                <button style={styles.closeBtn} onClick={() => setShowTally(false)}>✕</button>
+              </div>
+              <iframe
+                src={TALLY_FORM_URL}
+                style={styles.tallyIframe}
+                title="Enter the Dojo"
+                frameBorder="0"
+              />
+              <div style={styles.tallyFooter}>
+                <button style={styles.tallyContinueBtn} onClick={enterDojo}>
+                  I've submitted — take me to the compass →
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+    );
+  }
+
+  // ─── MAIN APP (after entering) ───
   return (
     <div style={styles.app}>
       <div style={{
@@ -310,6 +399,7 @@ export default function App() {
             </div>
 
             <p style={styles.footerText}>A Djedi Dojo Experience · DjediDojo.com</p>
+            <button style={styles.signOutBtn} onClick={signOut}>sign out</button>
           </div>
         )}
 
@@ -367,7 +457,7 @@ export default function App() {
 
             <div style={styles.elementCard}>
               <div style={styles.elementHeader}>
-                <span style={styles.elementIcon}>🔥</span>
+                <span style={styles.elementIcon}>🌊</span>
                 <div>
                   <div style={{ ...styles.elementName, color: COMPASS.water.color }}>O — Ownership</div>
                   <div style={styles.elementMeta}>Water · South · Midday · Emotion</div>
@@ -594,6 +684,11 @@ const styles = {
   title: { fontSize: "42px", fontWeight: "normal", letterSpacing: "0.2em", marginBottom: "8px", fontFamily: "'Georgia', serif" },
   subtitleItalic: { fontSize: "13px", fontStyle: "italic", color: "#a89a8a", marginBottom: "16px", textAlign: "center", fontFamily: "'Georgia', serif" },
   accentLine: { width: "50px", height: "1px", background: "#d4a574", margin: "16px auto 20px" },
+  welcomeCard: { width: "100%", padding: "28px 24px", border: "1px solid rgba(212,165,116,0.15)", borderRadius: "8px", background: "rgba(255,255,255,0.02)", textAlign: "center", marginBottom: "28px" },
+  welcomePara: { fontSize: "15px", color: "#c0b8ae", lineHeight: 1.6, marginBottom: "12px", fontStyle: "italic" },
+  welcomeParaAccent: { fontSize: "15px", color: "#d4a574", lineHeight: 1.6, marginTop: "16px", fontStyle: "italic" },
+  enterBtn: { background: "linear-gradient(135deg, rgba(212,165,116,0.15), rgba(212,165,116,0.05))", border: "1px solid #d4a574", color: "#e8e4df", fontSize: "14px", cursor: "pointer", fontFamily: "'Georgia', serif", letterSpacing: "0.2em", padding: "16px 36px", borderRadius: "6px", textTransform: "uppercase", marginBottom: "12px", transition: "all 0.3s ease" },
+  welcomeHint: { fontSize: "11px", color: "#666", fontStyle: "italic", textAlign: "center" },
   dailyCard: { width: "100%", padding: "24px 20px", border: "1px solid", borderRadius: "8px", background: "rgba(255,255,255,0.02)", cursor: "pointer", textAlign: "center", marginBottom: "28px", transition: "all 0.3s ease" },
   dailyLabel: { fontSize: "9px", letterSpacing: "0.25em", color: "#d4a574", marginBottom: "12px", fontFamily: "sans-serif", textTransform: "uppercase" },
   dailyIcon: { fontSize: "24px", marginBottom: "10px" },
@@ -619,6 +714,7 @@ const styles = {
   linkBtn: { background: "none", border: "none", color: "#d4a574", fontSize: "12px", cursor: "pointer", fontFamily: "sans-serif", letterSpacing: "0.05em", textDecoration: "underline", textUnderlineOffset: "3px" },
   linkBtnAlt: { background: "rgba(255,255,255,0.05)", border: "1px solid rgba(212,165,116,0.3)", color: "#d4a574", fontSize: "12px", cursor: "pointer", fontFamily: "sans-serif", letterSpacing: "0.05em", padding: "10px 20px", borderRadius: "6px" },
   footerText: { fontSize: "10px", color: "#555", fontFamily: "sans-serif", letterSpacing: "0.1em" },
+  signOutBtn: { background: "none", border: "none", color: "#444", fontSize: "9px", cursor: "pointer", fontFamily: "sans-serif", letterSpacing: "0.1em", marginTop: "12px", textTransform: "uppercase" },
   backBtn: { background: "none", border: "none", color: "#a89a8a", fontSize: "12px", cursor: "pointer", fontFamily: "sans-serif", alignSelf: "flex-start", marginBottom: "20px", padding: "4px 0" },
   dirTitle: { fontSize: "28px", fontWeight: "normal", marginBottom: "4px", fontFamily: "'Georgia', serif" },
   dirMeta: { fontSize: "11px", color: "#888", fontFamily: "sans-serif", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: "8px" },
@@ -654,6 +750,10 @@ const styles = {
   returnBtn: { background: "rgba(212,165,116,0.1)", border: "1px solid rgba(212,165,116,0.3)", color: "#d4a574", fontSize: "12px", cursor: "pointer", fontFamily: "sans-serif", letterSpacing: "0.1em", padding: "14px 24px", borderRadius: "6px", textTransform: "uppercase", marginTop: "12px", alignSelf: "center" },
   modalOverlay: { position: "fixed", inset: 0, background: "rgba(0,0,0,0.85)", zIndex: 100, display: "flex", justifyContent: "center", alignItems: "flex-start", padding: "40px 16px", overflowY: "auto" },
   modal: { background: "#151518", borderRadius: "12px", width: "100%", maxWidth: "480px", maxHeight: "80vh", overflow: "auto", border: "1px solid rgba(212,165,116,0.15)" },
+  tallyModal: { background: "#151518", borderRadius: "12px", width: "100%", maxWidth: "500px", maxHeight: "90vh", display: "flex", flexDirection: "column", border: "1px solid rgba(212,165,116,0.2)" },
+  tallyIframe: { width: "100%", flex: 1, minHeight: "480px", border: "none", background: "transparent" },
+  tallyFooter: { padding: "16px 20px", borderTop: "1px solid rgba(255,255,255,0.05)", display: "flex", justifyContent: "center" },
+  tallyContinueBtn: { background: "rgba(212,165,116,0.15)", border: "1px solid rgba(212,165,116,0.4)", color: "#d4a574", fontSize: "12px", cursor: "pointer", fontFamily: "sans-serif", letterSpacing: "0.05em", padding: "12px 24px", borderRadius: "6px" },
   modalHeader: { display: "flex", justifyContent: "space-between", alignItems: "center", padding: "20px 20px 12px", borderBottom: "1px solid rgba(255,255,255,0.05)" },
   modalTitle: { fontSize: "18px", fontWeight: "normal", color: "#d4a574" },
   closeBtn: { background: "none", border: "none", color: "#888", fontSize: "18px", cursor: "pointer" },
