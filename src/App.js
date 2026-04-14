@@ -301,12 +301,160 @@ export default function App() {
             </div>
 
             <div style={styles.bottomLinks}>
+              <button style={styles.linkBtn} onClick={() => navigate("about")}>
+                About the Compass
+              </button>
               <button style={styles.linkBtn} onClick={() => setShowJournal(true)}>
                 My Journal ({journal.length})
               </button>
             </div>
 
             <p style={styles.footerText}>A Djedi Dojo Experience · DjediDojo.com</p>
+          </div>
+        )}
+
+        {view === "about" && (
+          <div style={styles.aboutContainer}>
+            <button style={styles.backBtn} onClick={() => navigate("home")}>← Compass</button>
+
+            <h2 style={styles.aboutTitle}>About the Compass</h2>
+            <div style={styles.accentLine} />
+
+            <p style={styles.aboutHook}>
+              This isn't a self-help app. It's what I wish someone had handed me at 2am after the worst night of my life.
+            </p>
+
+            <p style={styles.aboutPara}>
+              Most people are taught how to fall in love. Almost no one is taught how to navigate love when it changes. SOLO Dojo is a relational discipline — a practice for moving through connection, conflict, separation, and renewal without losing your center.
+            </p>
+
+            <p style={styles.aboutPara}>
+              It's not about finding love. It's about removing the obstacles within yourself that block it.
+            </p>
+
+            <div style={styles.aboutSection}>
+              <h3 style={styles.aboutSectionTitle}>The Love Warrior</h3>
+              <p style={styles.aboutPara}>
+                Anyone who practices this becomes a Love Warrior. Not someone who conquers others — but someone with the courage to look inward and remove the inner obstacles to love.
+              </p>
+              <p style={styles.aboutParaItalic}>
+                You don't need to be ready. You just need to be here.
+              </p>
+            </div>
+
+            <div style={styles.aboutSection}>
+              <h3 style={styles.aboutSectionTitle}>The Compass & The Medicine Wheel</h3>
+              <p style={styles.aboutPara}>
+                The SOLO Compass draws from the ancient Medicine Wheel — a sacred map found across many indigenous wisdom traditions, where the four directions, four elements, and the sacred center form a complete picture of being human.
+              </p>
+              <p style={styles.aboutPara}>
+                Each compass point is a movement of the heart. Each element is its medicine.
+              </p>
+            </div>
+
+            <div style={styles.elementCard}>
+              <div style={styles.elementHeader}>
+                <span style={styles.elementIcon}>🔥</span>
+                <div>
+                  <div style={{ ...styles.elementName, color: COMPASS.fire.color }}>S — Sovereignty</div>
+                  <div style={styles.elementMeta}>Fire · East · Dawn · Spirit</div>
+                </div>
+              </div>
+              <p style={styles.elementDesc}>
+                Fire is the element of sovereignty, aliveness, and truth. In the Medicine Wheel, East is the direction of the rising sun — illumination, new beginnings, spirit. Fire burns away what is not yours and reveals what is. This is where love begins: with not abandoning yourself.
+              </p>
+            </div>
+
+            <div style={styles.elementCard}>
+              <div style={styles.elementHeader}>
+                <span style={styles.elementIcon}>🔥</span>
+                <div>
+                  <div style={{ ...styles.elementName, color: COMPASS.water.color }}>O — Ownership</div>
+                  <div style={styles.elementMeta}>Water · South · Midday · Emotion</div>
+                </div>
+              </div>
+              <p style={styles.elementDesc}>
+                Water is the element of emotion, flow, and depth. South is midday — full presence, full feeling, the heat of being human. Water teaches that emotions are information, not weapons. To own your emotions is to reclaim your power over your own inner weather.
+              </p>
+            </div>
+
+            <div style={styles.elementCard}>
+              <div style={styles.elementHeader}>
+                <span style={styles.elementIcon}>🌍</span>
+                <div>
+                  <div style={{ ...styles.elementName, color: COMPASS.earth.color }}>L — Letting Go</div>
+                  <div style={styles.elementMeta}>Earth · West · Dusk · Body</div>
+                </div>
+              </div>
+              <p style={styles.elementDesc}>
+                Earth is the element of grounding, embodiment, and return. West is the setting sun — completion, integration, the dignity of endings. Earth teaches that letting go is not failure. It is completion. What is finished gets composted into what will grow next.
+              </p>
+            </div>
+
+            <div style={styles.elementCard}>
+              <div style={styles.elementHeader}>
+                <span style={styles.elementIcon}>🌬️</span>
+                <div>
+                  <div style={{ ...styles.elementName, color: COMPASS.air.color }}>O — Opening</div>
+                  <div style={styles.elementMeta}>Air · North · Night · Mind</div>
+                </div>
+              </div>
+              <p style={styles.elementDesc}>
+                Air is the element of breath, wisdom, and vision. North is the still point of deep night — where insight lives, where we see clearly. Air teaches that love evolves when we do. To open is to allow new forms of love and life to emerge, unforced.
+              </p>
+            </div>
+
+            <div style={styles.elementCard}>
+              <div style={styles.elementHeader}>
+                <span style={styles.elementIcon}>◯</span>
+                <div>
+                  <div style={{ ...styles.elementName, color: "#d4a574" }}>The Void</div>
+                  <div style={styles.elementMeta}>Center · Within · The Pause · Source</div>
+                </div>
+              </div>
+              <p style={styles.elementDesc}>
+                At the center of every compass is the Void. Not emptiness — potential. It is the pause between breaths. The threshold between endings and beginnings. The space where identities soften and new possibilities emerge. When you don't know what to do, you return here. The Void is always available.
+              </p>
+              <p style={styles.aboutParaItalic}>
+                The Love Warrior is forged in the Void.
+              </p>
+            </div>
+
+            <div style={styles.aboutSection}>
+              <h3 style={styles.aboutSectionTitle}>How to Practice</h3>
+              <p style={styles.aboutPara}>
+                Each week, move through one compass direction. Fire in Week 1, Water in Week 2, Earth in Week 3, Air in Week 4. Return to the Void anytime you feel between identities.
+              </p>
+              <p style={styles.aboutPara}>
+                Within each direction, you'll find three tiers of practice:
+              </p>
+              <p style={styles.aboutParaSmall}>
+                <strong style={{ color: "#d4a574" }}>Spark</strong> — 5 minutes. Pull a quick fire prompt. Do it standing in line, between meetings, before bed.
+              </p>
+              <p style={styles.aboutParaSmall}>
+                <strong style={{ color: "#d4a574" }}>Daily Sit</strong> — 10–15 minutes. Settle in with breath. Write from the body, not the head.
+              </p>
+              <p style={styles.aboutParaSmall}>
+                <strong style={{ color: "#d4a574" }}>Deep Dive</strong> — 30–60 minutes. The weekly excavation. This is where chapters are born.
+              </p>
+              <p style={styles.aboutPara}>
+                Voice memos count. Writing counts. The practice is the reflection, not the medium.
+              </p>
+            </div>
+
+            <div style={{ ...styles.accentLine, margin: "24px auto" }} />
+
+            <p style={styles.aboutClosing}>
+              You are not writing a book. You are practicing the discipline of becoming a Love Warrior. The book is what falls out of the practice.
+            </p>
+
+            <p style={styles.aboutSignoff}>
+              — Sparkle Tony
+            </p>
+
+            <button style={styles.returnBtn} onClick={() => navigate("home")}>
+              Return to the Compass
+            </button>
           </div>
         )}
 
@@ -467,7 +615,7 @@ const styles = {
   voidIcon: { fontSize: "28px", color: "#d4a574", lineHeight: 1 },
   voidLabel: { fontSize: "9px", color: "#d4a574", fontFamily: "sans-serif", letterSpacing: "0.1em", marginTop: "4px", textTransform: "uppercase" },
   cardinal: { fontSize: "8px", color: "#d4a574", fontFamily: "sans-serif", letterSpacing: "0.2em", marginBottom: "2px", opacity: 0.6 },
-  bottomLinks: { display: "flex", gap: "20px", marginBottom: "20px" },
+  bottomLinks: { display: "flex", gap: "20px", marginBottom: "20px", flexWrap: "wrap", justifyContent: "center" },
   linkBtn: { background: "none", border: "none", color: "#d4a574", fontSize: "12px", cursor: "pointer", fontFamily: "sans-serif", letterSpacing: "0.05em", textDecoration: "underline", textUnderlineOffset: "3px" },
   linkBtnAlt: { background: "rgba(255,255,255,0.05)", border: "1px solid rgba(212,165,116,0.3)", color: "#d4a574", fontSize: "12px", cursor: "pointer", fontFamily: "sans-serif", letterSpacing: "0.05em", padding: "10px 20px", borderRadius: "6px" },
   footerText: { fontSize: "10px", color: "#555", fontFamily: "sans-serif", letterSpacing: "0.1em" },
@@ -487,6 +635,23 @@ const styles = {
   saveBtn: { width: "100%", padding: "14px", border: "none", borderRadius: "8px", color: "#fff", fontFamily: "sans-serif", fontSize: "13px", fontWeight: "600", letterSpacing: "0.05em", marginTop: "12px", transition: "all 0.2s" },
   savedTitle: { fontSize: "24px", fontWeight: "normal", color: "#d4a574", marginBottom: "6px" },
   savedText: { fontSize: "14px", color: "#888", fontStyle: "italic" },
+  aboutContainer: { display: "flex", flexDirection: "column", width: "100%" },
+  aboutTitle: { fontSize: "28px", fontWeight: "normal", color: "#e8e4df", fontFamily: "'Georgia', serif", textAlign: "center", marginBottom: "4px", letterSpacing: "0.05em" },
+  aboutHook: { fontSize: "16px", fontStyle: "italic", color: "#d4a574", lineHeight: 1.6, textAlign: "center", marginBottom: "24px", padding: "0 8px" },
+  aboutPara: { fontSize: "14px", color: "#c0b8ae", lineHeight: 1.7, marginBottom: "14px" },
+  aboutParaItalic: { fontSize: "14px", color: "#a89a8a", lineHeight: 1.7, fontStyle: "italic", marginBottom: "14px", textAlign: "center" },
+  aboutParaSmall: { fontSize: "13px", color: "#a89a8a", lineHeight: 1.6, marginBottom: "8px", paddingLeft: "12px" },
+  aboutSection: { marginTop: "24px", marginBottom: "8px" },
+  aboutSectionTitle: { fontSize: "16px", fontWeight: "normal", color: "#d4a574", fontFamily: "'Georgia', serif", marginBottom: "12px", letterSpacing: "0.03em" },
+  elementCard: { background: "rgba(255,255,255,0.02)", border: "1px solid rgba(212,165,116,0.1)", borderRadius: "8px", padding: "16px", marginBottom: "12px" },
+  elementHeader: { display: "flex", alignItems: "center", gap: "12px", marginBottom: "10px" },
+  elementIcon: { fontSize: "28px", lineHeight: 1 },
+  elementName: { fontSize: "16px", fontWeight: "600", fontFamily: "'Georgia', serif", marginBottom: "2px" },
+  elementMeta: { fontSize: "10px", color: "#888", fontFamily: "sans-serif", letterSpacing: "0.1em", textTransform: "uppercase" },
+  elementDesc: { fontSize: "13px", color: "#b5ada3", lineHeight: 1.7 },
+  aboutClosing: { fontSize: "15px", fontStyle: "italic", color: "#c0b8ae", lineHeight: 1.7, textAlign: "center", marginTop: "16px", marginBottom: "16px" },
+  aboutSignoff: { fontSize: "13px", color: "#a89a8a", textAlign: "center", fontStyle: "italic", marginBottom: "24px" },
+  returnBtn: { background: "rgba(212,165,116,0.1)", border: "1px solid rgba(212,165,116,0.3)", color: "#d4a574", fontSize: "12px", cursor: "pointer", fontFamily: "sans-serif", letterSpacing: "0.1em", padding: "14px 24px", borderRadius: "6px", textTransform: "uppercase", marginTop: "12px", alignSelf: "center" },
   modalOverlay: { position: "fixed", inset: 0, background: "rgba(0,0,0,0.85)", zIndex: 100, display: "flex", justifyContent: "center", alignItems: "flex-start", padding: "40px 16px", overflowY: "auto" },
   modal: { background: "#151518", borderRadius: "12px", width: "100%", maxWidth: "480px", maxHeight: "80vh", overflow: "auto", border: "1px solid rgba(212,165,116,0.15)" },
   modalHeader: { display: "flex", justifyContent: "space-between", alignItems: "center", padding: "20px 20px 12px", borderBottom: "1px solid rgba(255,255,255,0.05)" },
