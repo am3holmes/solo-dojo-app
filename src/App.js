@@ -14,27 +14,27 @@ const COMPASS = {
     color: "#C0392B",
     glow: "rgba(192,57,43,0.15)",
     mantra: "Becoming begins with not abandoning yourself.",
-    icon: "\u{1F525}",
+    icon: "🔥",
     sparks: [
       "What did you say yes to recently that you meant no to?",
-      "What is one truth about yourself you\u2019ve been softening for someone else?",
+      "What is one truth about yourself you’ve been softening for someone else?",
       "When was the last time you felt fully like yourself? What were you doing?",
       "What part of yourself do you protect the most? What are you protecting it from?",
       "If the people closest to you could only keep one version of you, which would you want them to keep?",
-      "What is the most honest thing you could say right now that you haven\u2019t said yet?",
-      "What turns you on about being alive right now? Not sexually \u2014 what makes your spirit say yes?",
+      "What is the most honest thing you could say right now that you haven’t said yet?",
+      "What turns you on about being alive right now? Not sexually — what makes your spirit say yes?",
       "Where in your life are you performing instead of being?",
     ],
     daily: [
-      { title: "The Abandoned Self", prompt: "Write about a time you left yourself to keep something intact \u2014 a relationship, a job, a friendship, a family peace. What did it cost you? What did you hope to gain?" },
-      { title: "The Sovereignty Inventory", prompt: "List five things that are non-negotiably yours \u2014 truths, values, practices, boundaries. For each: when did you last honor it? When did you last betray it?" },
-      { title: "The Honest Introduction", prompt: "Introduce yourself as if they could handle the real version. Not your title, not your role \u2014 who you actually are right now, in this season of your life." },
-      { title: "Desire as Sovereignty", prompt: "Write about something you desire \u2014 sexually, creatively, spiritually \u2014 that you haven\u2019t given yourself permission to want. What story have you been telling yourself about why you can\u2019t have it?" },
+      { title: "The Abandoned Self", prompt: "Write about a time you left yourself to keep something intact — a relationship, a job, a friendship, a family peace. What did it cost you? What did you hope to gain?" },
+      { title: "The Sovereignty Inventory", prompt: "List five things that are non-negotiably yours — truths, values, practices, boundaries. For each: when did you last honor it? When did you last betray it?" },
+      { title: "The Honest Introduction", prompt: "Introduce yourself as if they could handle the real version. Not your title, not your role — who you actually are right now, in this season of your life." },
+      { title: "Desire as Sovereignty", prompt: "Write about something you desire — sexually, creatively, spiritually — that you haven’t given yourself permission to want. What story have you been telling yourself about why you can’t have it?" },
       { title: "Fire Letter", prompt: "Write a letter to the part of yourself that dims its light to make others comfortable. What does that part need to hear?" },
     ],
     deep: [
-      { title: "The Loss of Center", prompt: "Write the full story of a time you lost your sovereignty \u2014 in a relationship, a career, a family system, an identity. Begin with the moment you first felt yourself slipping. Follow the thread. End with where you are now." },
-      { title: "The Erotic Self-Portrait", prompt: "Write a portrait of yourself as a sexual and sensual being \u2014 not performing, not for anyone\u2019s consumption. Who are you when desire exists without shame, without performance, without agenda?" },
+      { title: "The Loss of Center", prompt: "Write the full story of a time you lost your sovereignty — in a relationship, a career, a family system, an identity. Begin with the moment you first felt yourself slipping. Follow the thread. End with where you are now." },
+      { title: "The Erotic Self-Portrait", prompt: "Write a portrait of yourself as a sexual and sensual being — not performing, not for anyone’s consumption. Who are you when desire exists without shame, without performance, without agenda?" },
       { title: "The Reclaiming", prompt: "Write about coming back to yourself after losing center. What was the first thing you reclaimed? What was the hardest? What surprised you about who you were when you returned?" },
     ],
   },
@@ -48,14 +48,14 @@ const COMPASS = {
     color: "#2980B9",
     glow: "rgba(41,128,185,0.15)",
     mantra: "Emotions are information, not weapons.",
-    icon: "\u{1F30A}",
+    icon: "🌊",
     sparks: [
-      "What emotion are you carrying right now that you haven\u2019t named yet?",
+      "What emotion are you carrying right now that you haven’t named yet?",
       "What are you blaming someone else for that might actually be yours to feel?",
       "If your anger could speak one clean sentence, what would it say?",
       "Where in your body do you feel your current emotion? Describe the sensation, not the story.",
-      "What is the emotion underneath your default emotion? Under the anger \u2014 what? Under the numbness \u2014 what?",
-      "Name a feeling you had during intimacy that you didn\u2019t share. What stopped you?",
+      "What is the emotion underneath your default emotion? Under the anger — what? Under the numbness — what?",
+      "Name a feeling you had during intimacy that you didn’t share. What stopped you?",
       "What emotion did you feel today that you did not express? Where did it go?",
       "What would you say to someone you love if you could only use 'I feel' statements?",
     ],
@@ -63,13 +63,13 @@ const COMPASS = {
       { title: "The Storm Log", prompt: "Describe a recent moment when your emotions exceeded what the situation called for. What was the trigger? What was the older wound underneath?" },
       { title: "The Shame Inventory", prompt: "Name three things you feel shame about. For each: where did you learn this was shameful? Is it yours, or did someone hand it to you?" },
       { title: "The Sentence That Changes Everything", prompt: "Complete: 'I am feeling ___ and it is mine.' Write what shifts when you own it fully instead of directing it outward." },
-      { title: "Water Letter", prompt: "Write a letter to an emotion you\u2019ve been running from \u2014 grief, rage, loneliness, shame, desire. Ask it what it needs. Let it answer." },
-      { title: "The Body\u2019s Emotional Memory", prompt: "Think of deep intimacy where you felt truly met. Where did you feel it in your body? Now think of deep shame in intimacy. What would it take to let both memories live in the same body?" },
+      { title: "Water Letter", prompt: "Write a letter to an emotion you’ve been running from — grief, rage, loneliness, shame, desire. Ask it what it needs. Let it answer." },
+      { title: "The Body’s Emotional Memory", prompt: "Think of deep intimacy where you felt truly met. Where did you feel it in your body? Now think of deep shame in intimacy. What would it take to let both memories live in the same body?" },
     ],
     deep: [
       { title: "The Escalation Story", prompt: "Write the full story of a conflict that spiraled. Start with the surface trigger and peel back every layer. What were you really fighting about? Write with compassion for everyone involved, including yourself." },
       { title: "The Emotional Inheritance", prompt: "Trace one of your emotional patterns back to its origin. How did the people who raised you handle this emotion? What did you learn about this feeling before you had words for it? How does it show up in your relationships and sexuality now?" },
-      { title: "The Shame Story", prompt: "Write the full story of a shame you carry \u2014 around your body, your desire, your identity, your past. Not to exorcise it. To witness it. Then write one sentence about who you\u2019d be if this shame had no power over you." },
+      { title: "The Shame Story", prompt: "Write the full story of a shame you carry — around your body, your desire, your identity, your past. Not to exorcise it. To witness it. Then write one sentence about who you’d be if this shame had no power over you." },
     ],
   },
   earth: {
@@ -82,27 +82,27 @@ const COMPASS = {
     color: "#27AE60",
     glow: "rgba(39,174,96,0.15)",
     mantra: "Let it be. Let it be. Let it be.",
-    icon: "\u{1F30D}",
+    icon: "🌍",
     sparks: [
       "What are you trying to control right now that might not be yours to control?",
       "What would happen if you stopped trying to fix this?",
-      "Name something you\u2019re gripping tightly. What are you afraid will happen if you let go?",
+      "Name something you’re gripping tightly. What are you afraid will happen if you let go?",
       "Where is your body holding tension right now? What is it holding for you?",
       "What version of yourself are you ready to let die?",
-      "When was the last time you let someone truly see your body \u2014 without performing or hiding?",
+      "When was the last time you let someone truly see your body — without performing or hiding?",
       "What would your body say if it could speak one sentence right now?",
       "What are you holding onto that has already ended?",
     ],
     daily: [
       { title: "The Completion Ceremony", prompt: "Choose something that has run its course. Write its eulogy. Honor what it gave you. Name what it cost you. Say goodbye as if you meant it." },
-      { title: "The Body\u2019s Story", prompt: "Your body has been through everything you have. Write its lived experience. What has it endured? Enjoyed? Been denied? What does it need now?" },
-      { title: "The Grip Inventory", prompt: "List three things you\u2019re gripping \u2014 a hope, a grudge, an expectation, a fantasy, an old identity. For each: what will happen if you let go? What might actually happen?" },
-      { title: "Earth Letter", prompt: "Write a letter to someone you\u2019ve already lost \u2014 through breakup, distance, death, or change. Say the things you didn\u2019t say. Do not send it." },
-      { title: "Letting Pleasure In", prompt: "Write about your relationship with receiving pleasure \u2014 not giving, not performing, but receiving. Where do you brace? Where do you deflect? What would it feel like to let pleasure all the way in without wondering if you deserve it?" },
+      { title: "The Body’s Story", prompt: "Your body has been through everything you have. Write its lived experience. What has it endured? Enjoyed? Been denied? What does it need now?" },
+      { title: "The Grip Inventory", prompt: "List three things you’re gripping — a hope, a grudge, an expectation, a fantasy, an old identity. For each: what will happen if you let go? What might actually happen?" },
+      { title: "Earth Letter", prompt: "Write a letter to someone you’ve already lost — through breakup, distance, death, or change. Say the things you didn’t say. Do not send it." },
+      { title: "Letting Pleasure In", prompt: "Write about your relationship with receiving pleasure — not giving, not performing, but receiving. Where do you brace? Where do you deflect? What would it feel like to let pleasure all the way in without wondering if you deserve it?" },
     ],
     deep: [
-      { title: "The Letting Story", prompt: "Write the full story of the hardest goodbye \u2014 or the thing you haven\u2019t been able to let be. Begin with the first crack. Follow it through. End with who you became on the other side." },
-      { title: "The Archaeology of Armor", prompt: "Map the armor you wear \u2014 in your body, in your relationships, in your sexuality, in your public self. Where did each piece come from? Which pieces kept you safe? Which ones are keeping you trapped? If you removed one piece today, which would it be?" },
+      { title: "The Letting Story", prompt: "Write the full story of the hardest goodbye — or the thing you haven’t been able to let be. Begin with the first crack. Follow it through. End with who you became on the other side." },
+      { title: "The Archaeology of Armor", prompt: "Map the armor you wear — in your body, in your relationships, in your sexuality, in your public self. Where did each piece come from? Which pieces kept you safe? Which ones are keeping you trapped? If you removed one piece today, which would it be?" },
     ],
   },
   air: {
@@ -115,31 +115,31 @@ const COMPASS = {
     color: "#8E44AD",
     glow: "rgba(142,68,173,0.15)",
     mantra: "Who you are becoming has not arrived yet. Make room.",
-    icon: "\u{1F32C}\uFE0F",
+    icon: "🌬️",
     sparks: [
-      "What surprised you about love \u2014 or yourself in love \u2014 recently?",
+      "What surprised you about love — or yourself in love — recently?",
       "Name one way you are different in relationships than you were a year ago.",
-      "What is your Inner Critic\u2019s favorite line? Write it. Now write what your Spirit would say back.",
-      "Where in your life is something new trying to emerge that you haven\u2019t made room for?",
-      "What would you want from a lover if you weren\u2019t afraid to ask?",
+      "What is your Inner Critic’s favorite line? Write it. Now write what your Spirit would say back.",
+      "Where in your life is something new trying to emerge that you haven’t made room for?",
+      "What would you want from a lover if you weren’t afraid to ask?",
       "What lesson took you the longest to learn? Write it in one line.",
       "If love could speak to you right now, what would it say?",
-      "What form of intimacy are you curious about but haven\u2019t experienced?",
+      "What form of intimacy are you curious about but haven’t experienced?",
     ],
     daily: [
-      { title: "The Return Moment", prompt: "Describe a moment when your heart opened again after you thought it wouldn\u2019t. What happened? What did it feel like in your body? What made it possible?" },
-      { title: "The Evolved Love Letter", prompt: "Write a love letter \u2014 not to a person, but to the version of love, intimacy, or connection you are now capable of. What does this love look like?" },
-      { title: "The Critic and the Child", prompt: "Write a conversation between your Inner Critic and your Inner Child. Let the Critic say what it\u2019s been saying \u2014 about your body, your worth, your desirability. Then let the Child respond. Then let your Sovereign self say the final word." },
-      { title: "The New Form", prompt: "Describe a relationship that changed shape but didn\u2019t end. A romance that became a friendship. A sexual connection that became spiritual. What made the transition possible?" },
-      { title: "Air Letter", prompt: "Write a letter to your future self \u2014 the one who has integrated these lessons. What do you want them to remember about this season?" },
+      { title: "The Return Moment", prompt: "Describe a moment when your heart opened again after you thought it wouldn’t. What happened? What did it feel like in your body? What made it possible?" },
+      { title: "The Evolved Love Letter", prompt: "Write a love letter — not to a person, but to the version of love, intimacy, or connection you are now capable of. What does this love look like?" },
+      { title: "The Critic and the Child", prompt: "Write a conversation between your Inner Critic and your Inner Child. Let the Critic say what it’s been saying — about your body, your worth, your desirability. Then let the Child respond. Then let your Sovereign self say the final word." },
+      { title: "The New Form", prompt: "Describe a relationship that changed shape but didn’t end. A romance that became a friendship. A sexual connection that became spiritual. What made the transition possible?" },
+      { title: "Air Letter", prompt: "Write a letter to your future self — the one who has integrated these lessons. What do you want them to remember about this season?" },
     ],
     deep: [
-      { title: "The Return to Love", prompt: "Write the full story of when love came back \u2014 romantic, self-love, erotic, spiritual. The moment you realized you were not broken. Let this carry hope without bypassing the pain that preceded it." },
-      { title: "The Practitioner\u2019s Manifesto", prompt: "Write your personal manifesto. What do you stand for in your relationships, your sexuality, your self-expression, your daily life? What will you no longer tolerate \u2014 in others or in yourself? Write it as if it is already true." },
+      { title: "The Return to Love", prompt: "Write the full story of when love came back — romantic, self-love, erotic, spiritual. The moment you realized you were not broken. Let this carry hope without bypassing the pain that preceded it." },
+      { title: "The Practitioner’s Manifesto", prompt: "Write your personal manifesto. What do you stand for in your relationships, your sexuality, your self-expression, your daily life? What will you no longer tolerate — in others or in yourself? Write it as if it is already true." },
     ],
   },
   void: {
-    letter: "\u2205",
+    letter: "∅",
     name: "The Void",
     fullName: "The Center",
     element: "Center",
@@ -147,31 +147,31 @@ const COMPASS = {
     represents: "The Pause",
     color: "#2C3E50",
     glow: "rgba(44,62,80,0.2)",
-    mantra: "When you don\u2019t know what to do: return to the breath.",
-    icon: "\u25EF",
+    mantra: "When you don’t know what to do: return to the breath.",
+    icon: "◯",
     sparks: [
       "In the pause between exhale and inhale, what do you notice?",
-      "What identity are you between right now? Name what you were. Name that you don\u2019t yet know what\u2019s next.",
+      "What identity are you between right now? Name what you were. Name that you don’t yet know what’s next.",
       "What are you resisting about not knowing?",
       "If emptiness were not frightening, what would you do with this moment?",
       "Name three things you are certain of. Now three you are not. Which list feels more alive?",
-      "What part of your desire is in the Void right now \u2014 not gone, but unformed, waiting?",
+      "What part of your desire is in the Void right now — not gone, but unformed, waiting?",
     ],
     daily: [
-      { title: "The Between Place", prompt: "Describe where you are right now in the space between who you were and who you\u2019re becoming. Do not try to resolve it. Just describe the landscape." },
+      { title: "The Between Place", prompt: "Describe where you are right now in the space between who you were and who you’re becoming. Do not try to resolve it. Just describe the landscape." },
       { title: "The Emptying Practice", prompt: "Set a timer for 10 minutes. Write everything you think you know about yourself. Then cross out everything that is not true anymore. What remains?" },
-      { title: "Void Letter", prompt: "Write a letter to the unknown. Not to God, not to a person \u2014 to the actual experience of not knowing. What is your relationship with uncertainty?" },
+      { title: "Void Letter", prompt: "Write a letter to the unknown. Not to God, not to a person — to the actual experience of not knowing. What is your relationship with uncertainty?" },
     ],
     deep: [
       { title: "The Void Story", prompt: "Write the full story of a time you had no idea who you were anymore. Do not rush to the resolution. Stay in the middle of the story. Let yourself feel what it is like to be unformed." },
-      { title: "The Art of Emptying", prompt: "Reflect on what you have been carrying that is not yours \u2014 other people\u2019s expectations, old identities, inherited beliefs about love, sex, success, and worth. Write each one down. Then write what it would feel like to set it down." },
+      { title: "The Art of Emptying", prompt: "Reflect on what you have been carrying that is not yours — other people’s expectations, old identities, inherited beliefs about love, sex, success, and worth. Write each one down. Then write what it would feel like to set it down." },
     ],
   },
 };
 
 const DIRECTIONS = ["fire", "water", "earth", "air", "void"];
 const TIERS = ["sparks", "daily", "deep"];
-const TIER_LABELS = { sparks: "Spark \u00b7 5 min", daily: "Daily Sit \u00b7 10\u201315 min", deep: "Deep Dive \u00b7 30\u201360 min" };
+const TIER_LABELS = { sparks: "Spark · 5 min", daily: "Daily Sit · 10–15 min", deep: "Deep Dive · 30–60 min" };
 
 function getDailyPrompt() {
   const now = new Date();
@@ -643,17 +643,28 @@ export default function App() {
             {TIERS.map((tier) => {
               const prompts = compass[tier];
               if (!prompts) return null;
+              const isLocked = tier !== "sparks";
               return (
                 <div key={tier} style={styles.tierSection}>
-                  <div style={{ ...styles.tierLabel, background: compass.color }}>
-                    {TIER_LABELS[tier]}
+                  <div style={{ ...styles.tierLabel, background: isLocked ? "#444" : compass.color }}>
+                    {TIER_LABELS[tier]}{isLocked ? " — Members" : ""}
                   </div>
                   {prompts.map((p, i) => {
                     const isObj = typeof p === "object";
                     return (
-                      <button key={i} style={styles.promptBtn} onClick={() => navigate("prompt", activeDir, tier, p)}>
+                      <button key={i} style={{
+                        ...styles.promptBtn,
+                        opacity: isLocked ? 0.45 : 1,
+                        position: "relative",
+                      }} onClick={() => isLocked ? window.open(STRIPE_LINK, '_blank') : navigate("prompt", activeDir, tier, p)}>
+                        {isLocked && <span style={{
+                          position: "absolute", top: "8px", right: "10px",
+                          fontSize: "9px", color: "#d4a574", fontFamily: "sans-serif",
+                          letterSpacing: "0.1em", textTransform: "uppercase",
+                          background: "rgba(212,165,116,0.1)", padding: "2px 8px", borderRadius: "10px",
+                        }}>Join</span>}
                         {isObj && <span style={styles.promptTitle}>{p.title}</span>}
-                        <span style={styles.promptText}>{isObj ? p.prompt.slice(0, 80) + "\u2026" : p}</span>
+                        <span style={styles.promptText}>{isObj ? p.prompt.slice(0, 80) + "..." : p}</span>
                       </button>
                     );
                   })}
@@ -723,7 +734,7 @@ export default function App() {
                         </span>
                       </div>
                       {entry.promptTitle && <div style={styles.journalPromptTitle}>{entry.promptTitle}</div>}
-                      <p style={styles.journalPrompt}>"{entry.promptText?.slice(0, 60)}\u2026"</p>
+                      <p style={styles.journalPrompt}>"{entry.promptText?.slice(0, 60)}…"</p>
                       <p style={styles.journalText}>{entry.text}</p>
                     </div>
                   );
