@@ -1,7 +1,6 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 
 const TALLY_FORM_URL = "https://tally.so/embed/A7qM9z?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1";
-const STRIPE_LINK = "https://buy.stripe.com/cNi5kDbTq1pad6aa2F0kE03";
 
 const COMPASS = {
   fire: {
@@ -277,7 +276,7 @@ export default function App() {
         <div style={{ ...styles.content, opacity: fadeIn ? 1 : 0, transition: "opacity 0.3s ease" }}>
           <div style={{ ...styles.centered, justifyContent: "center", minHeight: "90vh" }}>
             <h1 style={styles.title}>SOLO DOJO</h1>
-            <p style={styles.subtitleItalic}>A Compass for the Dark Night of the Soul. Or whatever.</p>
+            <p style={styles.subtitleItalic}>The Art and Practice of Becoming Yourself</p>
             <div style={styles.accentLine} />
             <div style={styles.welcomeCard}>
               <p style={styles.welcomePara}>Most people are taught how to fall in love.</p>
@@ -325,7 +324,7 @@ export default function App() {
         {view === "home" && (
           <div style={styles.centered}>
             <h1 style={styles.title}>SOLO DOJO</h1>
-            <p style={styles.subtitleItalic}>A Compass for the Dark Night of the Soul. Or whatever.</p>
+            <p style={styles.subtitleItalic}>The Art and Practice of Becoming Yourself</p>
             <div style={styles.accentLine} />
 
             <div
@@ -401,14 +400,6 @@ export default function App() {
               <button style={styles.linkBtn} onClick={() => navigate("breath")}>Void Breath</button>
             </div>
 
-            <a href={STRIPE_LINK} target="_blank" rel="noopener noreferrer" style={{
-              display: "inline-block", padding: "14px 32px", background: "rgba(212,165,116,0.15)",
-              border: "1px solid #d4a574", color: "#d4a574", fontSize: "12px",
-              fontFamily: "sans-serif", letterSpacing: "0.15em", textTransform: "uppercase",
-              textDecoration: "none", borderRadius: "6px", marginBottom: "8px", textAlign: "center",
-            }}>Join the Weekly Dojo &mdash; Tuesdays 7pm CST</a>
-            <p style={{ fontSize: "10px", color: "#666", fontStyle: "italic", marginBottom: "20px" }}>$47/month &middot; Founding member rate &middot; Replays available</p>
-
             <p style={styles.footerText}>A Djedi Dojo Experience &middot; DjediDojo.com</p>
             <button style={styles.signOutBtn} onClick={signOut}>sign out</button>
           </div>
@@ -420,11 +411,11 @@ export default function App() {
             <button style={styles.backBtn} onClick={() => navigate("home")}>&larr; Compass</button>
 
             <h2 style={styles.aboutTitle}>About the Compass</h2>
-            <p style={{ ...styles.subtitleItalic, marginBottom: "16px" }}>The Practice of Becoming Who You Are</p>
+            <p style={{ ...styles.subtitleItalic, marginBottom: "16px" }}>A Compass for the Dark Night of the Soul. Or whatever.</p>
             <div style={styles.accentLine} />
 
             <p style={styles.aboutPara}>
-              SOLO Dojo is a practice of becoming &mdash; a weekly community dojo built around the SOLO Compass, a four-directional framework that maps Spirit, Emotions, Body, and Mind onto a wheel that turns in two directions: clockwise for healing, counterclockwise for creating.
+              SOLO Dojo is a practice of becoming &mdash; a live biweekly Wednesday practice (7&ndash;8:30pm Central / 5&ndash;6:30pm Pacific) built around the SOLO Compass, a four-directional framework that maps Spirit, Emotions, Body, and Mind onto a wheel that turns in two directions: clockwise for healing, counterclockwise for creating.
             </p>
 
             <p style={styles.aboutPara}>
@@ -538,7 +529,7 @@ export default function App() {
                 <strong style={{ color: "#e8e4df" }}>Paired</strong> &mdash; Between two people. One reads the prompt. Both answer. The listener holds space without fixing.
               </p>
               <p style={styles.aboutPara}>
-                <strong style={{ color: "#e8e4df" }}>Group</strong> &mdash; In the weekly dojo, a dinner party, a circle. Write first, then share. No advice. Just witnessing.
+                <strong style={{ color: "#e8e4df" }}>Group</strong> &mdash; In the biweekly Wednesday practice, a dinner party, a circle. Write first, then share. No advice. Just witnessing.
               </p>
             </div>
 
@@ -556,24 +547,6 @@ export default function App() {
               <p style={{ ...styles.aboutPara, fontStyle: "italic", color: "#666" }}>
                 Once installed, SOLO Dojo opens like a native app.
               </p>
-            </div>
-
-            <div style={{ ...styles.accentLine, margin: "24px auto" }} />
-
-            <div style={styles.aboutSection}>
-              <h3 style={styles.aboutSectionTitle}>Join the Weekly Dojo</h3>
-              <p style={styles.aboutPara}>
-                The app is free. The weekly live practice is where the compass comes alive. Every Tuesday at 7pm CST / 5pm PST, we meet in the dojo. Breath. Teaching. Prompt. Writing. Sharing. Witnessing. Replays are always available if you can't make it live.
-              </p>
-              <div style={{ textAlign: "center", margin: "20px 0" }}>
-                <a href={STRIPE_LINK} target="_blank" rel="noopener noreferrer" style={{
-                  display: "inline-block", padding: "14px 32px", background: "#d4a574",
-                  color: "#0d0d0f", fontSize: "12px", fontFamily: "sans-serif",
-                  letterSpacing: "0.15em", textTransform: "uppercase", textDecoration: "none",
-                  borderRadius: "6px", fontWeight: "600",
-                }}>Join SOLO Dojo &mdash; $47/month</a>
-              </div>
-              <p style={{ fontSize: "12px", fontStyle: "italic", color: "#666", textAlign: "center" }}>Founding member rate &middot; Replays available</p>
             </div>
 
             <div style={{ ...styles.accentLine, margin: "24px auto" }} />
